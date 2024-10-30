@@ -1,0 +1,18 @@
+* {
+  box-sizing: border-box;
+}
+
+#lynked {
+  .app-title {
+    font-size: 1.5em;
+    font-weight: bold;
+    margin-bottom: 1em;
+  }
+}
+
+#lynked-store{
+  position: fixed;
+  right: 20px;
+  bottom: 20px;
+  z-index: 10000;
+}

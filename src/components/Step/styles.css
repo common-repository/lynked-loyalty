@@ -1,0 +1,21 @@
+.link, .link:active, .link:visited {
+    text-decoration: none;
+    color: #3fb1ff;
+    margin-left: 5px;
+}
+
+.step--wrapper {
+    margin-bottom: 10px;
+}
+
+.stepTitle {
+    color: rgb(0, 13, 70);
+    font-size: 17px;
+    font-weight: bold;
+    min-width: 55px;
+    margin: 0  10px 10px 0;
+}
+
+.description {
+    font-size: 15px;
+}

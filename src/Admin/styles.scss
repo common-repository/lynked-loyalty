@@ -1,0 +1,399 @@
+.header {
+  background: rgb(16, 28, 82);
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding: 20px;
+}
+
+.header .logo {
+  width: 156px;
+  height: auto;
+}
+
+h2.title {
+  font-size: 28px;
+  font-weight: bold;
+  margin: 20px;
+  color: rgb(0, 13, 70);
+  font-family: "Circular Std", sans-serif;
+  text-align: center;
+}
+
+.setupInstruction--wrapper, .settings--popup {
+  margin: 0 25px;
+}
+
+.description {
+  font-size: 15px;
+  line-height: 1.75;
+}
+
+li.description {
+  margin: 7px 0;
+}
+
+.link {
+  &, &:active, &:visited {
+    text-decoration: none;
+    color: #3fb1ff;
+    margin-left: 5px;
+  }
+}
+
+h3 {
+  &.title-h3 {
+    font-size: 20px;
+    font-weight: bold;
+    margin-bottom: 15px;
+    color: rgb(0, 13, 70);
+
+    &.subtitle {
+      text-align: center;
+      font-size: 23px;
+      margin-bottom: 20px;
+    }
+
+    &.collect {
+      margin-top: 25px;
+    }
+  }
+}
+
+h4.title-h4 {
+  font-size: 18px;
+  margin-bottom: 20px;
+  color: rgb(0, 13, 70);
+}
+
+
+.withoutSpace {
+
+  &, &:active, &:visited {
+    margin-left: 0;
+  }
+}
+
+.lynked-description {
+  font-size: 18px;
+  margin: 0 25px 20px;
+  color: rgb(0, 13, 70);
+  line-height: 1.75;
+}
+
+.settings--popup {
+  .title-h3 {
+    font-size: 20px;
+    font-weight: bold;
+    margin-bottom: 15px;
+    color: rgb(0, 13, 70);
+  }
+  .save--wrap{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    .save--btn{
+      width: 25%;
+      border-radius: 4px;
+      background: linear-gradient(0deg, #515cdd -16.46%, #3fb1ff 98.11%);
+      border: 1px solid #515cdd;
+      color: #fff;
+      font-size: 18px;
+      font-weight: 500;
+      line-height: 23px;
+      text-align: center;
+      padding: 10px;
+      transition: all .15s ease;
+      cursor: pointer;
+      &:disabled{
+        background: linear-gradient(0deg, #35353d -16.46%, #545a5e 98.11%);
+      }
+    }
+  }
+
+  .settings--container {
+    display: flex;
+    .settings--form{
+      width: 49%;
+      .field-wrap{
+        margin-bottom: 15px;
+        .label{
+          font-size: 16px;
+          font-weight: 700;
+          margin-bottom: 10px;
+          color: rgb(0, 13, 70);
+        }
+        .color--inputs-wrap{
+          display: flex;
+          align-items: center;
+          justify-content: flex-start;
+          .color-input{
+            background: none;
+            border: 1px solid #000000;
+            width: 100px;
+            height: 25px;
+            min-height: 25px;
+            -webkit-appearance: none;
+            padding: 0;
+            border-radius: 5px;
+            &::-webkit-color-swatch {
+              border: none;
+              border-radius: 5px;
+              padding: 0;
+            }
+            &::-webkit-color-swatch-wrapper {
+              border: none;
+              border-radius: 5px;
+              padding: 0;
+            }
+          }
+        }
+
+        .input-wrap{
+          display: flex;
+          align-items: center;
+          margin-bottom: 5px;
+          cursor: pointer;
+          p{
+            margin:0 0 0 10px;
+            font-size: 16px;
+            font-weight: 500;
+            color: rgb(0, 13, 70);
+          }
+        }
+      }
+    }
+
+    .popup--show{
+      position: relative;
+      width: 49%;
+      .rewards--wrapper {
+        position: absolute;
+        z-index: 800000 !important;
+        bottom: 20px;
+        min-width: 60px;
+        min-height: 60px;
+        margin-right: 20px;
+        font-size: 14px;
+      }
+
+      .reward-content {
+        padding: 0 16px 0;
+        position: absolute;
+        z-index: 2;
+        top: 100px;
+        width: 91%;
+        overflow-y: auto;
+        overflow-x: hidden;
+        height: 200px;
+        .reward-inside-block {
+          padding: 0 12px;
+          box-shadow: 0 0 13px 0 rgba(0, 0, 0, 0.09);
+          margin-bottom: 12px;
+          border-radius: 10px;
+          background: white;
+          display: flex;
+          flex-direction: column;
+          .pointWays--wrapper {
+            margin-top: 5px;
+
+            .pointWays {
+              display: flex;
+              align-items: center;
+              justify-content: space-between;
+              padding: 12px 0 12px 5px;
+              border-bottom: 1px solid #dddddd;
+              cursor: pointer;
+            }
+
+            .pointWays:hover {
+              background-color: transparent;
+              opacity: 0.5;
+            }
+
+            .pointWays:last-child {
+              border-bottom: none;
+              margin-bottom: 0;
+            }
+
+            .pointsWays-item {
+              display: flex;
+              align-items: center;
+              pointer-events: none;
+            }
+
+            .pointsWays-item .card-description {
+              margin-left: 12px;
+            }
+
+            .pointsWays-item svg {
+              width: 30px;
+              height: 30px;
+            }
+
+            .pointWays .arrow-right {
+              pointer-events: none;
+              transform: rotate(180deg);
+            }
+          }
+        }
+      }
+
+      .reward-content::-webkit-scrollbar {
+        background-color: transparent;
+        width: 0;
+      }
+
+      .reward-content .title, .reward-content--wrapper .title {
+        font-size: 16px;
+        font-weight: 700;
+        line-height: 120%;
+        color: #41A9FC;
+        margin-bottom: 8px;
+        margin-top: 15px;
+        text-align: center;
+      }
+
+      .reward-content .card-description {
+        line-height: 150%;
+        padding-left: 12px;
+        padding-right: 12px;
+        font-size: 13px;
+        font-weight: 400;
+        text-align: center;
+        color: #3c464e;
+        margin: 0;
+      }
+      .rewards--btn {
+        background: rgb(86, 163, 243);
+        min-width: 60px;
+        height: 30px;
+        border-radius: 50px;
+        border: none;
+        text-align: center;
+        padding: 15px;
+        font-size: 14px;
+        cursor: pointer;
+        display: flex;
+        align-items: center;
+      }
+
+      .reward--btn {
+        display: inline-flex;
+        align-items: center;
+
+        span {
+          margin-left: 15px;
+          font-size: 14px;
+          color: white;
+          font-weight: 700;
+          font-family: "Circular Std", sans-serif;
+        }
+
+        img {
+          width: 28px;
+        }
+      }
+
+      .close-btn {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        min-width: 60px;
+        height: 60px;
+        opacity: 0;
+        position: absolute;
+        right: 0;
+        top: 0;
+      }
+
+      .closeBlock .reward--btn {
+        -webkit-animation: fadeIn .2s ease;
+        animation: fadeIn .2s ease;
+        -webkit-animation-fill-mode: forwards;
+        animation-fill-mode: forwards;
+      }
+
+      /*    big modal */
+      .reward-block {
+        transition: all 0.3s ease-out;
+        position: absolute;
+        bottom: 100px;
+        z-index: 1 !important;
+        margin-right: 20px;
+        right: 0;
+        width: 360px;
+        height: 350px;
+        background: white;
+        border-radius: 10px;
+        box-shadow: 0 0 45px 23px rgba(168, 168, 168, 0.15);
+        opacity: 0;
+        pointer-events: none;
+        font-family: "Circular Std", sans-serif !important;
+      }
+      .reward-block.view-block {
+        pointer-events: all;
+        opacity: 1;
+      }
+      .closeModal {
+        position: absolute;
+        right: 24px;
+        top: 20px;
+        cursor: pointer;
+      }
+      .reward--header {
+        max-height: 150px;
+        padding: 24px;
+        position: relative;
+        background: rgb(86, 163, 243);
+        border-top-right-radius: 10px;
+        border-top-left-radius: 10px;
+        min-height: 60px;
+
+        h2 {
+          font-weight: 600;
+          font-size: 32px;
+          margin: 0;
+          color: white;
+          font-family: "Circular Std", sans-serif;
+        }
+
+        h4 {
+          margin: 7px 0 0;
+          font-size: 16px;
+          color: white;
+          font-family: "Circular Std", sans-serif;
+          font-weight: 700;
+        }
+      }
+
+      .reward-footer {
+        position: absolute;
+        bottom: 0;
+        z-index: 5;
+        width: 100%;
+        background: white;
+        border-bottom-right-radius: 10px;
+        border-bottom-left-radius: 10px;
+        height: 40px;
+        text-align: center;
+        font-size: 13px;
+        box-shadow: 0 -5px 12px -8px rgba(0, 0, 0, 0.33);
+      }
+
+      .reward-footer .card-description {
+        margin: 8px;
+      }
+      .point-logo-wrapper {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+      }
+
+      .point-logo-wrapper img {
+        width: 30px;
+        height: 35px;
+      }
+    }
+  }
+}

@@ -1,0 +1,87 @@
+.login--wrapper {
+    margin-top: 20px;
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+
+    .logo {
+        width: 156px;
+        height: auto;
+    }
+}
+
+.login--form {
+    display: flex;
+    flex-direction: column;
+    width: 60%;
+    margin: 0 auto 30px;
+    max-width: 500px;
+}
+
+.login--btn {
+    width: 100%;
+    border-radius: 4px;
+    background: linear-gradient(0deg, #515cdd -16.46%, #3fb1ff 98.11%);
+    border: 1px solid #515cdd;
+    color: #fff;
+    font-size: 18px;
+    font-weight: 500;
+    line-height: 23px;
+    text-align: center;
+    padding: 10px;
+    transition: all .15s ease;
+    cursor: pointer;
+}
+
+.login--form input {
+    border-radius: 4px;
+    box-shadow: rgb(0 0 0 / 20%) 0 0 6px 0;
+    padding: 13px 16px;
+    margin: 0 0 10px;
+    font-size: 18px;
+    line-height: 20px;
+    background: rgb(255, 255, 255);
+    width: 100%;
+    border: none;
+}
+
+h2.title {
+    color: rgb(0, 13, 70);
+    font-family: "Circular Std", sans-serif;
+    font-size: 28px;
+    font-weight: bold;
+}
+
+.login--form input:focus {
+    outline: none;
+}
+
+.showHidePassword {
+    position: absolute;
+    width: 24px;
+    height: 24px;
+    right: 16px;
+    top: 40%;
+    bottom: 13px;
+    transform: translateY(-50%);
+    padding: 0;
+    background: none;
+    border: none;
+}
+
+.password--wrapper {
+    position: relative;
+}
+
+.input--wrapper {
+    position: relative;
+    padding-bottom: 25px;
+}
+
+.error {
+    color: red;
+    margin-top: 10px;
+    position: absolute;
+    left: 0;
+    bottom: 12px;
+}

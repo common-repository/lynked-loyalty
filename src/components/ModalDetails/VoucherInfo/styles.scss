@@ -1,0 +1,110 @@
+.system-btn {
+  background-color: transparent!important;
+  border: none;
+  border-radius: 3px;
+  color: inherit;
+  cursor: pointer;
+  line-height: inherit;
+  font: inherit;
+  height: 36px;
+  padding: 8px!important;
+  position: absolute;
+  text-align: left;
+  width: 36px;
+  right: 5px;
+
+  svg {
+    fill: #8d8d8f;
+  }
+}
+
+
+.copy-code--input {
+  appearance: none;
+  border: 1px solid #e6e6e6;
+  color: #637381;
+  font-size: 14px;
+  margin: 0;
+  outline: none;
+  padding: 12px 20px;
+  width: 100%;
+  border-radius: 5px;
+  text-align: center;
+  cursor: default;
+}
+
+.copy-code--input:focus {
+  box-shadow: none
+}
+
+.lds-ring {
+  display: inline-block;
+  position: relative;
+  width: 24px;
+  height: 24px;
+}
+
+.lds-ring div {
+  box-sizing: border-box;
+  display: block;
+  position: absolute;
+  width: 20px;
+  height: 20px;
+  margin: 2px;
+  border: 2px solid #fff;
+  border-radius: 50%;
+  animation: lds-ring 1.2s cubic-bezier(0.5, 0, 0.5, 1) infinite;
+  border-color: #fff transparent transparent transparent;
+}
+
+.lds-ring div:nth-child(1) {
+  animation-delay: -0.45s;
+}
+
+.lds-ring div:nth-child(2) {
+  animation-delay: -0.3s;
+}
+
+.lds-ring div:nth-child(3) {
+  animation-delay: -0.15s;
+}
+
+.copy-code--wrapper {
+  display: flex;
+  position: relative;
+  align-items: center;
+  margin-top: 10px;
+}
+
+.apply-voucher--btn {
+  width: 100%;
+  padding: 10px 16px;
+  cursor: pointer;
+  font-size: 14px;
+  font-weight: 400;
+  color: white;
+  background: rgb(0, 13, 70);
+  margin-top: 20px;
+  border-radius: 5px;
+  display: flex;
+  justify-content: center;
+  height: 45px;
+}
+
+.inactive-voucher {
+  cursor: default;
+  background: #bfbfbf;
+}
+
+.apply-voucher--btn svg {
+  width: 24px;
+}
+
+@keyframes lds-ring {
+  0% {
+    transform: rotate(0deg);
+  }
+  100% {
+    transform: rotate(360deg);
+  }
+}
